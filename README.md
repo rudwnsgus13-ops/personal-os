@@ -1,10 +1,9 @@
-# Personal OS v1.2 — Wealth Foundation
+# Personal OS v1.3 — Wealth Returns + Google Reconnect
 
-- Tasks + Google Drive 동기화
-- Google Calendar 양방향 일정
-- Wealth 보유자산/부채 수동 등록
-- 순자산 자동 계산
-- 암호화폐 공개 시세 갱신 (Bybit spot + USD/KRW 환산)
-- 주식은 안정적인 공식/허가 시세 공급원을 붙이기 전까지 수동 단가
+- Wealth 평균 매입단가, 평가손익, 수익률(%) UI
+- 기존 자산은 그대로 유지하며 매입단가가 있는 항목만 수익률 표시
+- Google 최초 승인 이력을 기기에 기록하고 이후 실행/업데이트 시 무프롬프트 재연결을 우선 시도
+- 브라우저/Google 정책상 세션이 만료되거나 재인증이 요구되면 Google 연결 버튼 1회 필요
+- Tasks / Drive / Calendar / crypto price refresh 유지
 
-금융계좌/증권계좌 로그인이나 거래 기능은 사용하지 않습니다.
+금융계좌 로그인이나 거래 기능은 사용하지 않습니다.
