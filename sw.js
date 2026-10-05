@@ -1,4 +1,4 @@
-const C="personal-os-v1-8-20261006",A=["./","./index.html","./styles.css?v=1.8","./app.js?v=1.8","./manifest.webmanifest","./version.json"];
+const C="personal-os-v1-9-20261006",A=["./","./index.html","./styles.css?v=1.9","./app.js?v=1.9","./manifest.webmanifest","./version.json"];
 self.addEventListener("install",e=>{self.skipWaiting();e.waitUntil(caches.open(C).then(c=>c.addAll(A)))});
 self.addEventListener("activate",e=>e.waitUntil(Promise.all([self.clients.claim(),caches.keys().then(k=>Promise.all(k.filter(x=>x!==C).map(x=>caches.delete(x))))])));
 self.addEventListener("fetch",e=>{if(e.request.method!=="GET"||new URL(e.request.url).origin!==location.origin)return;const u=new URL(e.request.url);if(u.pathname.endsWith("/version.json")||u.pathname.endsWith("/index.html")||u.pathname.endsWith("/personal-os/")){e.respondWith(fetch(e.request,{cache:"no-store"}).catch(()=>caches.match(e.request)));return}e.respondWith(fetch(e.request,{cache:"no-store"}).then(r=>{const x=r.clone();caches.open(C).then(c=>c.put(e.request,x));return r}).catch(()=>caches.match(e.request)))});
